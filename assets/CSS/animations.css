@@ -1,0 +1,209 @@
+/*==========================================================
+    PIXEL TIME EXPERIENCE
+    ANIMATIONS.CSS
+    Micro Animaciones
+    Version : 1.0
+    Author  : Brandon De la Cruz Hernández
+==========================================================*/
+
+
+/*==========================================================
+    GLOBAL TRANSITIONS
+==========================================================*/
+
+a,
+button,
+img,
+video{
+
+    transition:var(--transition);
+
+}
+
+
+/*==========================================================
+    BUTTON HOVER
+==========================================================*/
+
+button:hover{
+
+    cursor:pointer;
+
+}
+
+
+/*==========================================================
+    IMAGE HOVER
+==========================================================*/
+
+.about-image img:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==========================================================
+    LINK HOVER
+==========================================================*/
+
+a:hover{
+
+    color:var(--color-orange);
+
+}
+
+
+/*==========================================================
+    FADE
+==========================================================*/
+
+.fade{
+
+    opacity:0;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+}
+
+
+/*==========================================================
+    LOADER
+==========================================================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:var(--color-black);
+
+    z-index:var(--z-loader);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:1s ease;
+
+}
+
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+
+/*==========================================================
+    PULSE
+==========================================================*/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*==========================================================
+    FLOAT
+==========================================================*/
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==========================================================
+    SCROLL INDICATOR
+==========================================================*/
+
+@keyframes scrollLine{
+
+    0%{
+
+        transform:scaleY(0);
+
+        transform-origin:top;
+
+    }
+
+    50%{
+
+        transform:scaleY(1);
+
+        transform-origin:top;
+
+    }
+
+    51%{
+
+        transform-origin:bottom;
+
+    }
+
+    100%{
+
+        transform:scaleY(0);
+
+        transform-origin:bottom;
+
+    }
+
+}
+
+
+/*==========================================================
+    HERO SCROLL
+==========================================================*/
+
+.hero-scroll::after{
+
+    animation:scrollLine 2.5s infinite;
+
+}

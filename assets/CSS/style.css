@@ -1,0 +1,27 @@
+/*==========================================================
+PIXEL TIME EXPERIENCE
+STYLE.CSS
+Archivo principal
+==========================================================*/
+
+@import url("./variables.css");
+
+@import url("./reset.css.css");
+
+@import url("./layout.css.css");
+
+@import url("./hero.css");
+
+@import url("./about.css");
+
+@import url("./animations.css");
+
+@import url("./responsive.css");
+
+@import url("./typography.css");
+
+@import url("./our-work.css");
+
+@import url("./featured-projects.css");
+
+@import url("./theme-switch.css");
